@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-
-from typing import Callable, Optional, Union
-from uuid import uuid4
+""" Module declares a redis class and methods."""
 import redis
+from uuid import uuid4
+from typing import Union, Callable, Optional
 from functools import wraps
-
-"""
-    Writing strings to Redis.
-"""
 
 
 def count_calls(method: Callable) -> Callable:
